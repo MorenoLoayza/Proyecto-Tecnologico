@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Recreation Center - Proyecto Tecnológico</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Recreation Center</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link"></a></li>
+                <li><a href="#" class="link"></a></li>
+                <li><a href="#" class="link"></a></li>
+                <li><a href="#" class="link"></a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Inicia Sesión</button>
+            <button class="btn" id="registerBtn" onclick="register()">Registrarse</button>
+        
+            
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+<!-----------------------------  usuario enviar información a un servidor web ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- Iniciar sesion de  -------------------------->
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>¿No tienes una cuenta?  <a href="#" onclick="register()">¡Crea tu cuenta aquí!</a></span>
+                <header>Iniciar sesión</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Nombre de usuario o Email"  autocomplete="off">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Contraseña"  autocomplete="off">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Entrar" >
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Recordame</label>
+                </div>
+                <div class="two">
+                    <label><a href="#" onclick="forget()">¿Olvidaste tu contraseña?</a></label>
+                </div>
+            </div>
+        </div>
+        <!------------------- Registrarse de -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>¿Ya tienes una cuenta? <a href="#" onclick="login()">Inicia Sesión</a></span>
+                <header>Regístrate</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nombres"  autocomplete="off">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Apellidos"  autocomplete="off">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="DNI"  autocomplete="off">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Numero de Contacto"  autocomplete="off">
+                    <i class='bx bx-phone'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Correo Electrónico"  autocomplete="off">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Contraseña"  autocomplete="off">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Registrarse">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Recordame</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terminos & condiciones</a></label>
+                </div>
+            </div>
+        </div>
+        <!------------------- Olvidarse contraseña -------------------------->
+        <div class="forget-container" id="forget">
+            <div class="top">
+               <a href="#" ></a>
+                <header>Formulario de Recuperar Contraseña</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Ingrese su E-mail de su cuenta"  autocomplete="off">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Recuperar">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="forget-check">
+                    <label for="forget-check"> Importante: Se le enviará un correo electrónico con la información actualizada si en caso existiera en nuestros datos.</label>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>   
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }    
+ 
+</script>
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("forget");
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+        z.style.opacity = 0;
+        document.querySelector('#login input[type="text"]').value = "";
+        document.querySelector('#login input[type="password"]').value = "";
+      
+        
+    }
+    function register() {
+    x.style.left = "-510px";
+    y.style.right = "5px";
+    z.style.right = "-510px"; // Oculta el formulario de recuperación de contraseña
+    a.className = "btn";
+    b.className += " white-btn";
+    x.style.opacity = 0;
+    y.style.opacity = 1;
+    z.style.opacity = 0;
+    document.querySelector('#register input[type="text"]').value = "";
+    document.querySelector('#register input[type="password"]').value = "";
+    // Habilita la edición de los campos de entrada de texto en el formulario de registro
+    document.querySelector('#register input[type="text"]').removeAttribute("readonly");
+    document.querySelector('#register input[type="password"]').removeAttribute("readonly");
+}
+function forget() {
+    x.style.left = "-510px";
+    y.style.right = "-510px";
+    z.style.right = "5px";
+    x.style.opacity = 0;
+    y.style.opacity = 0;
+    z.style.opacity = 1;
+    document.querySelector('#forget input[type="text"]').value = "";
+    // Habilita la edición del campo de entrada de texto en el formulario de recuperación de contraseña
+    document.querySelector('#forget input[type="text"]').removeAttribute("readonly");
+}
+</script>
+</body>
+</html>
