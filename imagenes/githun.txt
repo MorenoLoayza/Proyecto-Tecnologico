@@ -1,0 +1,23 @@
+loayzaluismoreno@gmail.com
+Luisalbertomorenoloayza1
+1er Paso :
+poner en el simbolo del sistema  : npm install
+poner en el simbolo del sistema : git clone https://github.com/jhonatanmle/mercadolibre-web.git
+2do Paso:
+cd mercadolibre-web
+3er Paso : 
+code .
+
+-- git pull  - actualizar los cambios
+-- git fetch - comprobar si hay algún cambio
+-- pull recine
+-- git checkout .... ( nombre ) para ir en rama en rama
+4to paso : buscar la rama que se encuentra en una ezquina azul superior  y hacer tu parte
+5to paso : npm run dev
+6to paso : ctrl + click  al link y me sale la web
+7to  paso : mostrar mis cambios  : git add .        ----  significa seleccionar los archivos antes de subirlos
+git commit -m "cargar imagenes"  ----  significa confirmar los archivos pre seleccionados y adicional puedes poner un mensaje
+git push  ---- subir los archivos seleccionados al repositorio global
+
+id = #
+2 filas , 10 columnas
